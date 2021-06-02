@@ -130,7 +130,7 @@ Contributions are accepted! We'd love the communities help in building a better 
 6. **Synthesize from a checkpoint**
   
    ```
-   python3 server.py --checkpoint ~/tacotron/logs-tacotron/model.ckpt-185000
+   python3 demo_server.py --checkpoint ~/tacotron/logs-tacotron/model.ckpt-185000
    ```
    Replace "185000" with the checkpoint number that you want to use, then open a browser
    to `localhost:3000` and type what you want to speak. Alternately, you can
