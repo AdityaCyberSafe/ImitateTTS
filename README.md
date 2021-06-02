@@ -1,7 +1,7 @@
-# mimic2
+# ImitateTTS
 
-This is a fork of [keithito/tacotron](https://github.com/keithito/tacotron)
-with tooling and code enhancements. This repo is actively developed on by the Mycroft AI team and community.
+This is a fork of [MycroftAI/mimic2](https://github.com/MycroftAI/mimic2)
+with tooling and code enhancements. This repo is actively developed on by Aditya Patil.
 
 
 ## Background
@@ -19,8 +19,7 @@ Pull requests are welcome!
 
 
 ## Contributions
-Contributions are accepted! We'd love the communities help in building a better speech synthesis engine; weather it be code, or, update on the README, bug reports, etc. For real time conversations, join our [mattermost](https://chat.mycroft.ai/community/channels/machine-learning) chat and enter the machinelearning channel.
-
+Contributions are accepted! We'd love the communities help in building a better speech synthesis engine; weather it be code, or, update on the README, bug reports, etc.
 ## Quick Start
 
 ### Installing dependencies
@@ -97,10 +96,6 @@ Contributions are accepted! We'd love the communities help in building a better 
    ```
    python3 preprocess.py --dataset ljspeech
    ```
-   If recorded with mimic-recording-studio
-   ````
-   python3 preprocess.py --dataset mrs --mrs_dir=<path_to>/mimic-recording-studio/
-   ````
 
      * other datasets can be used, i.e. `--dataset blizzard` for Blizzard data
      * for the mailabs dataset, do `preprocess.py --help` for options. Also, note that mailabs uses sample_size of 16000
@@ -135,7 +130,7 @@ Contributions are accepted! We'd love the communities help in building a better 
 6. **Synthesize from a checkpoint**
   
    ```
-   python3 demo_server.py --checkpoint ~/tacotron/logs-tacotron/model.ckpt-185000
+   python3 server.py --checkpoint ~/tacotron/logs-tacotron/model.ckpt-185000
    ```
    Replace "185000" with the checkpoint number that you want to use, then open a browser
    to `localhost:3000` and type what you want to speak. Alternately, you can
@@ -190,13 +185,9 @@ Contributions are accepted! We'd love the communities help in building a better 
     
   * Here is the expected loss curve when training on LJ Speech with the default hyperparameters:
     ![Loss curve](https://user-images.githubusercontent.com/1945356/36077599-c0513e4a-0f21-11e8-8525-07347847720c.png)
-
-  * If you used mimic-recording-studio and want to create an ljspeech dataset syntax out of it you can use the following command
-  ````
-  python3 ./datasets/createljspeech.py --mrs_dir=<path_to>/mimic-recording-studio/
   ````
   This generates an tacotron/LJSpeech-1.1 folder under your user home.
-
+  ````
 
 
 ## Other Implementations
